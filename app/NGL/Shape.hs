@@ -30,7 +30,7 @@ toVertex :: [[Point]] -> Picture
 toVertex xs = map vertex $ concat xs
 
 vertex :: Point -> Vertex2 Float
-vertex p = (\(k,l) -> Vertex2 k l) p
+vertex (k,l) = Vertex2 k l
 
 rotate :: Float -> [(Float, Float)] -> [(Float, Float)]
 rotate theta = rotate2D' (toRadians theta)
